@@ -11,3 +11,7 @@ $routes->get('/services', 'Services::index');
 $routes->match(['get', 'post'], '/contact', 'Contact::index');
 $routes->get('/register', 'Register::index');
 $routes->post('/register', 'Register::create');
+$routes->get('dashboard', 'Dashboard::index');
+$routes->get('account/(:num)', 'Dashboard::viewAccount/$1');
+$routes->get('login', 'Login::index');
+$routes->post('login', 'Login::authenticate');

@@ -172,24 +172,34 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link <?= (isset($page) && $page == 'home') ? 'active' : '' ?>" href="<?=
-base_url() ?>">Home</a>
+base_url()
+?>">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= (isset($page) && $page == 'about') ? 'active' : '' ?>" href="<?=
-base_url('about') ?>">About</a>
+base_url('about')
+?>">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= (isset($page) && $page == 'services') ? 'active' : '' ?>" href="<?=
-base_url('services') ?>">Services</a>
+base_url('services')
+?>">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= (isset($page) && $page == 'contact') ? 'active' : '' ?>" href="<?=
-base_url('contact') ?>">Contact</a>
+base_url('contact')
+?>">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?= (isset($page) && $page == 'register') ? 'active' : '' ?>" href="<?=
-base_url('register') ?>">Register</a>
+base_url('register')
+?>">Register</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= (isset($page) && $page == 'login') ? 'active' : '' ?>" href="<?=
+base_url('login')
+?>">Login</a>
+                </li>
                 </ul>
             </div>
         </div>
