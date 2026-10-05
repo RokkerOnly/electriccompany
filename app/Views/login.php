@@ -14,7 +14,17 @@
                             Access the customer account dashboard
                         </p>
                     </div>
+                    <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger">
+                        <?= esc(session()->getFlashdata('error')) ?>
+                    </div>
+                    <?php endif ?>
 
+                    <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert alert-success">
+                        <?= esc(session()->getFlashdata('success')) ?>
+                    </div>
+                    <?php endif ?>
                     <form method="POST" action="<?= base_url('login') ?>">
                         <?= csrf_field() ?>
 
@@ -23,13 +33,8 @@
                                 Email Address
                             </label>
 
-                            <input
-                                type="email"
-                                class="form-control form-control-lg"
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email"
-                            >
+                            <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                placeholder="Enter your email" value="<?= esc(old('email')) ?>">
                         </div>
 
                         <div class="mb-4">
@@ -37,13 +42,8 @@
                                 Password
                             </label>
 
-                            <input
-                                type="password"
-                                class="form-control form-control-lg"
-                                id="password"
-                                name="password"
-                                placeholder="Enter your password"
-                            >
+                            <input type="password" class="form-control form-control-lg" id="password" name="password"
+                                placeholder="Enter your password">
                         </div>
 
                         <button type="submit" class="btn btn-primary w-100">
